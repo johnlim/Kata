@@ -1,0 +1,9 @@
+#ignore compiler generated folders/files:
+
+
+#Ignore VS2010 IDE generated files
+*.user
+*.suo
+*.sdf
+*.opensdf
+
