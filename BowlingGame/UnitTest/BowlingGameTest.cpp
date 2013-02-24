@@ -4,7 +4,7 @@ TEST_GROUP(BowlingGame)
 {
 };
 
-TEST(BowlingGame, FirstTest)
+TEST(BowlingGame, testGutterGame)
 {
-   FAIL("Fail me!");
+   Game g = new Game;
 }
