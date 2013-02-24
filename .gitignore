@@ -1,5 +1,9 @@
 #ignore compiler generated folders/files:
-
+/BowlingGame/Debug
+/BowlingGame/BowlingGame/Debug
+/BowlingGame/UnitTest/Debug
+/ipch
+/BowlingGame/ipch
 
 #Ignore VS2010 IDE generated files
 *.user
