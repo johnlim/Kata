@@ -14,7 +14,7 @@ TEST(BowlingGame, testGutterGame)
      g->roll(0);
    }
 
-   LONGS_EQUAL(0, g.score());
+   LONGS_EQUAL(0, g->score());
 
    delete g;
 }
