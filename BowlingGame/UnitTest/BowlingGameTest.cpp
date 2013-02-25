@@ -4,24 +4,25 @@
 TEST_GROUP(BowlingGame)
 {
   Game g;
+
+  void rollMany(int n, int pins)
+  {
+    for(int i=0; i<n; i++)
+    {
+      g.roll(pins);
+    }
+  }
 };
+
 
 TEST(BowlingGame, testGutterGame)
 {
-   for(int i=0; i<20; i++)
-   {
-     g.roll(0);
-   }
-
-   LONGS_EQUAL(0, g.score());
+  rollMany(20, 0);
+  LONGS_EQUAL(0, g.score());
 }
 
 TEST(BowlingGame, testAllOnes)
 {
-  for(int i=0; i<20; i++)
-  {
-    g.roll(1);
-  }
-
+  rollMany(20, 1);
   LONGS_EQUAL(20, g.score());
 }
