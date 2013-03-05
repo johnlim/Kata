@@ -16,18 +16,18 @@ void Game::roll(int pins)
 int Game::score()
 {
   int gameScore = 0;
-  int i = 0;
+  int frameIndex = 0;
   for(int frame = 0; frame < 10; frame++)
   {
-    if((rolls[i] + rolls[i + 1]) == 10) //spare
+    if((rolls[frameIndex] + rolls[frameIndex + 1]) == 10) //spare
     {
-      gameScore = 10 + rolls[i + 2];
-      i += 2;
+      gameScore = 10 + rolls[frameIndex + 2];
+      frameIndex += 2;
     }
     else 
     {
-      gameScore += rolls[i] + rolls[i+1];
-      i += 2;
+      gameScore += rolls[frameIndex] + rolls[frameIndex+1];
+      frameIndex += 2;
     }
   }
   return gameScore;
