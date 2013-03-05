@@ -6,7 +6,6 @@ public:
   int score();
 
 private:
-  int gameScore;
   enum{MaxNoOfRollsPerGame = 21};
   int rolls[MaxNoOfRollsPerGame];
   int currentRoll;

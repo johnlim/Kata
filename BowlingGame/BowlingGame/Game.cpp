@@ -1,8 +1,7 @@
 #include "Game.h"
 
 Game::Game()
-      :gameScore(0),
-       currentRoll(0)
+      :currentRoll(0)
 {
   for(int i=0; i<(sizeof(rolls)/sizeof(int)); i++)
   {
@@ -11,16 +10,17 @@ Game::Game()
 }
 void Game::roll(int pins)
 {
-  gameScore += pins;
   rolls[currentRoll++] = pins;
 }
 
 int Game::score()
 {
   int gameScore = 0;
-  for(int i=0; i<(sizeof(rolls)/sizeof(int)); i++)
+  int i = 0;
+  for(int frame = 0; frame < 10; frame++)
   {
-    gameScore += rolls[i];
+    gameScore += rolls[i] + rolls[i+1];
+    i += 2;
   }
   return gameScore;
 }
