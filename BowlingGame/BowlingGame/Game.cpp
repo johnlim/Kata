@@ -26,7 +26,7 @@ int Game::score()
     }
     else if(isSpare(frameIndex))
     {
-      gameScore = 10 + rolls[frameIndex + 2];
+      gameScore += 10 + rolls[frameIndex + 2];
       frameIndex += 2;
     }
     else 
