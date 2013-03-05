@@ -9,4 +9,6 @@ private:
   enum{MaxNoOfRollsPerGame = 21};
   int rolls[MaxNoOfRollsPerGame];
   int currentRoll;
+
+  bool isSpare(int frameIndex);
 };
