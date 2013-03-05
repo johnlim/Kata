@@ -40,3 +40,12 @@ TEST(BowlingGame, testOneSpare)
   rollMany(17,0);
   LONGS_EQUAL(16, g.score());
 }
+
+TEST(BowlingGame, testOneStrike)
+{
+  g.roll(10);
+  g.roll(3);
+  g.roll(4);
+  rollMany(16,0);
+  LONGS_EQUAL(24,g.score());
+}
