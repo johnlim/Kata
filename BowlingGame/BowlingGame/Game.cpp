@@ -19,7 +19,7 @@ int Game::score()
   int frameIndex = 0;
   for(int frame = 0; frame < 10; frame++)
   {
-    if(rolls[frameIndex] == 10) //strike
+    if(isStrike(frameIndex)) 
     {
       gameScore +=(10 + strikeBonus(frameIndex));
       frameIndex++;
@@ -53,4 +53,8 @@ int Game::spareBonus(int frameIndex) {
 
 int Game::strikeBonus(int frameIndex) {
   return  rolls[frameIndex+1] + rolls[frameIndex+2];
+}
+
+bool Game::isStrike(int frameIndex) {
+  return rolls[frameIndex] == 10;
 }
