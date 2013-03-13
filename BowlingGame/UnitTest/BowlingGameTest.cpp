@@ -56,3 +56,9 @@ TEST(BowlingGame, testOneStrike)
   rollMany(16,0);
   LONGS_EQUAL(24,g.score());
 }
+
+TEST(BowlingGame, testPerfectGame)
+{
+  rollMany(12,10);
+  LONGS_EQUAL(300 , g.score());
+}
